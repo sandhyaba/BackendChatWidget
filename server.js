@@ -26,7 +26,9 @@ io.on("connection", (socket) => {
     console.log("User disconnected:", socket.id);
   });
 });
-
+app.get('/api/message', (req, res) => {
+  res.json({ message: "Hello! Your API is working 🚀" });
+});
 server.listen(5000, () => {
   console.log("Server running on port 5000");
 });
